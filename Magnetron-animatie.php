@@ -108,7 +108,7 @@
 <!-- Microwave container -->
 <div class="microwave">
   <!-- Timer display -->
-  <div class="timer" id="timer">00:30</div>
+  <div class="timer" id="timer">00:59</div>
   <!-- Temperature display (clickable) -->
   <div class="temp-display" id="temp" onclick="increaseTemp()">20°C</div>
   <!-- Microwave window with loading bar -->
