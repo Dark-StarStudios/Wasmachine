@@ -15,19 +15,19 @@
     $Wasmachine1 = new Wasmachine(); //nieuwe instantie van wasmachine aanmaken
     $Magnetron1 = new Magnetron(); //nieuwe instantie van magnetron aanmaken
 
-    if(isset($_POST['IsWasmachineWork'])){  //Controleer of we de knopje "on" wasmachine van is gedrukt
+    if(isset($_POST['IsWasmachineWork'])){  //Controleer of we de knopje "on" voor wasmachine is gedrukt
         if($_POST['IsWasmachineWork'] == "true"){
             $_SESSION["WasmachineWork"] = 1;
         }
-        if($_POST['IsWasmachineWork'] == "false"){ //Controleer of we de knopje "off" wasmachine van is gedrukt
+        if($_POST['IsWasmachineWork'] == "false"){ //Controleer of we de knopje "off" voor wasmachine is gedrukt
             $_SESSION["WasmachineWork"] = null;
         }
     }
-    if(isset($_POST['IsMagnetronWork'])){  //Controleer of we de knopje "on" magnetron van is gedrukt
+    if(isset($_POST['IsMagnetronWork'])){  //Controleer of we de knopje "on" voor magnetron is gedrukt
         if($_POST['IsMagnetronWork'] == "true"){
             $_SESSION["MagnetronWork"] = 1;
         }
-        if($_POST['IsMagnetronWork'] == "false"){  //Controleer of we de knopje "off" magnetron van is gedrukt
+        if($_POST['IsMagnetronWork'] == "false"){  //Controleer of we de knopje "off" voor magnetron is gedrukt
             $_SESSION["MagnetronWork"] = null;
         }
     }
@@ -41,11 +41,11 @@
     }
 
     if(isset($_POST['kleding']) && isset($_POST['zeep'])){
-        $Wasmachine1->Wassen($_POST['kleding'],$_POST['zeep']);
+        $Wasmachine1->Wassen($_POST['kleding'],$_POST['zeep']); //past de functie 'wassen' toe aan wasmachine1
     }
     echo "<br>";
     if(isset($_POST['voeding']) && (isset($_POST['tijd'])&& !empty($_POST['tijd'])) && isset($_POST['Wattege'])){
-        $Magnetron1->opwarmen($_POST['voeding'],$_POST['tijd'], $_POST['Wattege']);
+        $Magnetron1->opwarmen($_POST['voeding'],$_POST['tijd'], $_POST['Wattege']);  //past de functie 'opwarmen' toe aan magnetron1
     }
     
 ?>

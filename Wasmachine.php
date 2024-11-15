@@ -1,7 +1,7 @@
 <?php
 include_once 'Apparaat.php';
 class Wasmachine extends Apparaat{
-    public function __construct($isWork = false){ //Constructie opstarten als parent en argument geven
+    public function __construct($isWork = false){ //Constructie opstarten als parent en argument (input) geeft 
         parent::__construct($isWork);
     }
 
